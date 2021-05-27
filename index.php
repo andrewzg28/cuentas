@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="img/logo.png" />
   
 </head>
-<body class="hold-transition login-page" style="background-image: url('img/fondo.jpg');background-size:100% 100%;">
+<body class="hold-transition login-page" style="background-image: url('img/fondo.png');background-size:100% 100%;">
 <div class="login-box">
   <div class="login-logo">
   <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
