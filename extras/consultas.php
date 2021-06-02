@@ -17,7 +17,7 @@ if($view=="susu"){
     $result1 = $conn->query($sql1);
 
     //PERSONAS QUE PAGAN SUSU
-    $sql2 = "SELECT id_susu,persona FROM susu";
+    $sql2 = "SELECT id_susu,persona FROM susu WHERE pago = '0.00'";
     $result2 = $conn->query($sql2);
 
     //PERSONAS QUE FALTAN POR PAGAR

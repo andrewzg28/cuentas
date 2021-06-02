@@ -74,12 +74,12 @@ $view="susu";
       <div class="container-fluid">
         <div class="row">
           <section class="col-lg-12 connectedSortable">
-          <center>
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#listado">Listado</button>&nbsp;&nbsp;
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#depositar">Pago</button>&nbsp;&nbsp;
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#retirar">Limpiar</button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#faltan">Faltan por pagar</button>
-              </center><br>
+         
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#listado">Listado</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#depositar">Pago</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#retirar">Limpiar</button><br><br>
+                <button type="button" class="btn btn-primary col-12" data-toggle="modal" data-target="#faltan">Faltan</button>
+            <br>
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
