@@ -22,7 +22,7 @@
   <!-- /.login-logo -->
   <div class="card" style="border-radius:500px;">
     <div class="card-body login-card-body" style="border-radius:30px;">
-      <p class="login-box-msg">Iniciar Sesion</p>
+      <p class="login-box-msg">Iniciar Sesión</p>
       <?php include("src/consulta_login.php");?>
       <form method="post">
         <div class="input-group mb-3">
