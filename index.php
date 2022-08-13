@@ -17,7 +17,7 @@
   <div class="login-logo">
   <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8; width:22%;">
-    <font color=white size=150><b>MG!</b> System</a></font>
+    <font color=white size=150><b>MG!</b> Systems</a></font>
   </div>
   <!-- /.login-logo -->
   <div class="card" style="border-radius:500px;">
