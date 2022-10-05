@@ -11,7 +11,7 @@ $view="susu";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Menu Principal | AMG! System</title>
+  <title>Susu | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/all.min.css">
   <script src="../fonts/all.js"></script>
@@ -32,6 +32,14 @@ $view="susu";
   <script src="../scripts/dashboard.js"></script>
   <script src="../scripts/demo.js"></script>
   <script src="../scripts/bootstrap.min.js"></script>
+
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../css/select2.min.css">
+  <link rel="stylesheet" href="../css/select2-bootstrap4.min.css">
+  <!-- Select2 -->
+  <script src="../scripts/select2.full.min.js"></script>
+
+
   <link rel="icon" type="image/png" href="../img/logo.png" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -178,20 +186,18 @@ $view="susu";
         <div class="modal-body">
          <center>Formulario de Pago</center><br>
           <div class="col-auto">
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text"><i class="fas fa-user"></i></div>
-              </div>
-              <select id="persona" name="persona" class="form-control" required>
-                    <option disabled selected>Seleccione una persona</option>
+            <div class="form-group col-12">
+              <div class="form-group">
+                  <label>Personas</label>
+                  <select class="select2" multiple="multiple" id="persona" name="persona[]" data-placeholder="Seleccione Personas" data-dropdown-css-class="select2-purple" style="width: 100%;">
                     <?php
                      while($row2 = $result2->fetch_assoc()) {
                         echo "<option value='".$row2["id_susu"]."'>".$row2["persona"]."</option>";
                      }
                     ?>
-              </select>
+                  </select>
+                </div>
             </div>
-            
           </div>
           </div>
         <div class="modal-footer justify-content-between">
@@ -263,5 +269,17 @@ $view="susu";
   <!--FIN DE MODAL -->
  <?php include("../footer.php");?>
 </div>
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+   
+  });
+</script>
 </body>
 </html>
