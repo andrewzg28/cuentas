@@ -46,7 +46,7 @@
           </li>
           <li class="nav-header">ADICIONALES</li>
           <li class="nav-item has-treeview">
-            <a href="extras/susu.php" class="nav-link">
+            <a href="susu.php" class="nav-link">
             <i class="fas fa-money-bill-wave"></i>
               <p>
                 Susu

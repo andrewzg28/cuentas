@@ -1,5 +1,5 @@
 <?php 
-require("../conexion/bd.php");
+
 date_default_timezone_set("America/Panama");
 
 //CONTADOR DE DATOS

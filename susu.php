@@ -1,5 +1,6 @@
 <?php
-include("../baseurl.php"); 
+include("baseurl.php"); 
+include("conexion/bd.php");
 session_start();
 if($_SESSION["control"]!=1){
   header("Location: ".$baseurl);
@@ -13,34 +14,34 @@ $view="susu";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Susu | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/all.min.css">
-  <script src="../fonts/all.js"></script>
-  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="../css/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="../css/jqvmap.min.css">
-  <link rel="stylesheet" href="../css/adminlte.min.css">
-  <link rel="stylesheet" href="../css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="../css/daterangepicker.css">
-  <link rel="stylesheet" href="../css/summernote-bs4.css">
-  <link rel="icon" type="image/png" href="../img/logo.png" />
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <script src="../scripts/jquery.min.js"></script>
-  <script src="../scripts/jquery-ui.min.js"></script>
-  <script src="../scripts/summernote-bs4.min.js"></script>
-  <script src="../scripts/jquery.overlayScrollbars.min.js"></script>
-  <script src="../scripts/adminlte.js"></script>
-  <script src="../scripts/dashboard.js"></script>
-  <script src="../scripts/demo.js"></script>
-  <script src="../scripts/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="fonts/all.js"></script>
+  <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="css/jqvmap.min.css">
+  <link rel="stylesheet" href="css/adminlte.min.css">
+  <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <link rel="stylesheet" href="css/summernote-bs4.css">
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/summernote-bs4.min.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
+  <script src="scripts/adminlte.js"></script>
+  <script src="scripts/dashboard.js"></script>
+  <script src="scripts/demo.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 
   <!-- Select2 -->
-  <link rel="stylesheet" href="../css/select2.min.css">
-  <link rel="stylesheet" href="../css/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
   <!-- Select2 -->
-  <script src="../scripts/select2.full.min.js"></script>
+  <script src="scripts/select2.full.min.js"></script>
 
 
-  <link rel="icon" type="image/png" href="../img/logo.png" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -56,14 +57,14 @@ $view="susu";
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">MG! System</span>
     </a>
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../img/user.png" class="img-circle elevation-2" alt="User Image">
+          <img src="img/user.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Andrés Alexis</a>
@@ -77,8 +78,8 @@ $view="susu";
     <div class="content-header">
     </div>
     <section class="content">
-    <?php include("../contadores/susu.php");?>
-    <?php include("consultas.php");?>
+    <?php include("contadores/susu.php");?>
+    <?php include("src/consultas_susu.php");?>
       <div class="container-fluid">
         <div class="row">
           <section class="col-lg-12 connectedSortable">
@@ -267,7 +268,7 @@ $view="susu";
     </div>
   </div>
   <!--FIN DE MODAL -->
- <?php include("../footer.php");?>
+ <?php include("footer.php");?>
 </div>
 <script>
   $(function () {

@@ -1,6 +1,4 @@
 <?php 
-include('../baseurl.php');
-include('../conexion/bd.php');
 date_default_timezone_set("America/Panama");
 
 if($view=="niz"){

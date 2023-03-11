@@ -1,5 +1,5 @@
 <?php 
-include_once("../conexion/bd.php");
+include_once("conexion/bd.php");
 date_default_timezone_set("America/Panama");
 
 if(isset($_REQUEST["pagar_susu"])){
