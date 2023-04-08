@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AMG! - System | Login</title>
+  <title>AM - System | Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/all.min.css">
-  <script src="fonts/all.js"></script>
+  <link rel="stylesheet" href="fonts/css/all.min.css">
+  <script src="fonts/js/all.js"></script>
   <link rel="stylesheet" href="css/adminlte.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
   <link rel="icon" type="image/png" href="img/logo.png" />
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="hold-transition login-page" style="background-image: url('img/fondo.jpg');background-size:100% 100%;">
 <div class="login-box">
   <div class="login-logo">
   <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8; width:22%;">
-    <font color=white size=150><b>MG!</b> Systems</a></font>
+    <font color=white size=150><b></b> Systems</a></font>
   </div>
   <!-- /.login-logo -->
   <div class="card" style="border-radius:500px;">

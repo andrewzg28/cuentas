@@ -11,25 +11,12 @@ $view="ver_cuenta";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menu Principal | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/all.min.css">
-  <script src="fonts/all.js"></script>
-  <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="css/jqvmap.min.css">
+  <link rel="stylesheet" href="fonts/css/all.min.css">
+  <script src="fonts/js/all.js"></script>
   <link rel="stylesheet" href="css/adminlte.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="css/daterangepicker.css">
-  <link rel="stylesheet" href="css/summernote-bs4.css">
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/summernote-bs4.min.js"></script>
-  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
-  <script src="scripts/adminlte.js"></script>
-  <script src="scripts/dashboard.js"></script>
-  <script src="scripts/demo.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
   <link rel="icon" type="image/png" href="img/logo.png" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -75,36 +62,28 @@ $view="ver_cuenta";
           <button class="btn btn-success" data-toggle="modal" data-target="#listado">Realizar Pago</button>
           <button class="btn btn-danger" data-toggle="modal" data-target="#limpiar">Cancelar Cuenta</button><br><br>
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">
+              <div class="card-header bg-dark">
+                <h3 class="card-title ">
                   <i class="fas fa-search-dollar"></i>
-                  Historial de Cuenta de <?php echo $nombre." ".$apellido;?>
+                  Historial de <b><?php echo $nombre." ".$apellido;?></b>
                 </h3>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <table class="table table-hover table-responsive-xl" style="text-align:center;">
+                <table class="table table-hover table-responsive-xl" style="text-align:center; font-size:small;">
                     <thead>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Fecha de Pago</th>
-                        <th>Capital Anterior</th>
-                        <th>Interes</th>
-                        <th>Pago de Capital</th>
-                        <th>Pago Interes</th>
-                        <th>Total a Pagar</th>
+                        <th style="width:100px;">#</th>
+                        <th style="width:100px;">Fecha</th>
+                        <th style="width:100px;">Anterior</th>
+                        <th style="width:100px;">Pagado</th>
                     </thead>
                     <tbody>
                         <?php 
                         while($row = $result->fetch_assoc()) { 
                             echo "<tr>
                                 <td>".$row["id_transaccion"]."</td>
-                                <td>".$row["nombre"]." ".$row["apellido"]."</td>
                                 <td>".$row["fecha_pago"]."</td>
                                 <td>$".$row["capital"]."</td>
-                                <td>$".$row["interes"]."</td>
-                                <td>$".$row["pago_capital"]."</td>
-                                <td>$".$row["pago_interes"]."</td>
-                                <th style='color:red;'>$".$row["pago_total"]."</th>
+                                <th style='color:#337ec8;'>$".$row["pago_total"]."</th>
                             </tr>";
                         }
                         ?>
@@ -130,7 +109,7 @@ $view="ver_cuenta";
         <div class="modal-body">
         Debe Capital: <b><?php echo $capital;?></b><br>
         Debe Interes: <b><?php echo $interes;?></b><br>
-        <b style="color:red;">TOTAL: <?php echo $total_final;?></b>
+        <b style="color:red;">TOTAL: <?php echo number_format($total_final, 2, '.', '');?></b>
         <hr>
           <div class="col-auto">
             <div class="input-group mb-2">
@@ -178,7 +157,7 @@ $view="ver_cuenta";
         <div class="modal-body">
         Debe Capital: <b><?php echo $capital;?></b><br>
         Debe Interes: <b><?php echo $interes;?></b><br>
-        <b style="color:red;">TOTAL: <?php echo $total_final;?></b>
+        <b style="color:red;">TOTAL: <?php echo number_format($total_final, 2, '.', '');?></b>
         <input type="hidden" id="id_cuenta" name="id_cuenta" value="<?php echo $id_cuenta;?>">
         <hr>
          <?php 
@@ -202,4 +181,10 @@ $view="ver_cuenta";
  <?php include("footer.php");?>
 </div>
 </body>
+<script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
+  <script src="scripts/adminlte.js"></script>
+  <script src="scripts/demo.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 </html>

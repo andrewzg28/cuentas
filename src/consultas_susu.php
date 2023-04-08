@@ -1,13 +1,10 @@
 <?php 
 date_default_timezone_set("America/Panama");
 
-if($view=="niz"){
-    $sql = "SELECT id_niz,cantidad,estado,total FROM ahorro_niz ORDER BY id_niz DESC";
-    $result = $conn->query($sql);
-}
 if($view=="susu"){
     $ano = date('Y');
     $mes = date('m');
+    $dia = date('d');
     $sql = "SELECT id_susu,persona,pago FROM susu";
     $result = $conn->query($sql);
 

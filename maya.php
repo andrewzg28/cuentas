@@ -13,25 +13,12 @@ $view="maya";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menu Principal | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/all.min.css">
-  <script src="fonts/all.js"></script>
-  <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="css/jqvmap.min.css">
+  <link rel="stylesheet" href="fonts/css/all.min.css">
+  <script src="fonts/js/all.js"></script>
   <link rel="stylesheet" href="css/adminlte.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="css/daterangepicker.css">
-  <link rel="stylesheet" href="css/summernote-bs4.css">
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/summernote-bs4.min.js"></script>
-  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
-  <script src="scripts/adminlte.js"></script>
-  <script src="scripts/dashboard.js"></script>
-  <script src="scripts/demo.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
   <link rel="icon" type="image/png" href="img/logo.png" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -128,5 +115,11 @@ $view="maya";
   </div>
  <?php include("footer.php");?>
 </div>
+<script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
+  <script src="scripts/adminlte.js"></script>
+  <script src="scripts/demo.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>

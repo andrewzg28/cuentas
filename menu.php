@@ -5,6 +5,8 @@ if($_SESSION["control"]!=1){
   header("Location: ".$baseurl);
 }
 $view="menu";
+require("conexion/bd.php");
+date_default_timezone_set("America/Panama");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,26 +15,15 @@ $view="menu";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Menu Principal | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/all.min.css">
-  <script src="fonts/all.js"></script>
-  <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/css/all.min.css">
   <link rel="stylesheet" href="css/jqvmap.min.css">
   <link rel="stylesheet" href="css/adminlte.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="css/daterangepicker.css">
-  <link rel="stylesheet" href="css/summernote-bs4.css">
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/summernote-bs4.min.js"></script>
-  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
-  <script src="scripts/adminlte.js"></script>
-  <script src="scripts/dashboard.js"></script>
-  <script src="scripts/demo.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
   <link rel="icon" type="image/png" href="img/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -69,12 +60,11 @@ $view="menu";
     <div class="content-header">
     </div>
     <section class="content">
-    <?php include("contadores/menu.php");?>
     <?php include("src/consulta.php");?>
       <div class="container-fluid">
         <div class="row">
           <section class="col-lg-7 connectedSortable">
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#listado">Nuevo Prestamo</button><br><br>
+          <button type="button" class="btn" style="background-color: #2871b9; color:white;" data-toggle="modal" data-target="#listado"><i class="fa-solid fa-plus"></i> Nuevo Prestamo</button><br><br>
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
@@ -104,7 +94,7 @@ $view="menu";
                     }
                     ?>
                   </select><br>
-                  <button class="btn btn-primary btn-block" type="submit" id="btn_buscar" name="btn_buscar"><i class="fas fa-search-dollar"></i> Buscar</button>
+                  <button class="btn btn-block" type="submit" id="btn_buscar" name="btn_buscar" style="background-color: #2871b9; color:white;"><i class="fas fa-search-dollar"></i> Buscar</button>
                 </form>
                 <hr>
                 <?php echo $tabla;?>
@@ -118,15 +108,6 @@ $view="menu";
                 <i class="fas fa-truck-moving"></i>
                   Ultimas 5 Transacciones
                 </h3>
-                <div class="card-tools">
-                  <button type="button"
-                          class="btn btn-primary btn-sm"
-                          data-card-widget="collapse"
-                          data-toggle="tooltip"
-                          title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
               </div>
               <div class="card-body">
                 <table class="table table-responsive-xl table-hover">
@@ -234,5 +215,12 @@ $view="menu";
   <!-- FIN DE MODAL -->
  <?php include("footer.php");?>
 </div>
+<script src="fonts/js/all.min.js"></script>
+<script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
+  <script src="scripts/adminlte.js"></script>
+  <script src="scripts/demo.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>

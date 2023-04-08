@@ -43,7 +43,7 @@ $total_final = $capital+$interes;
 ?>
 <div class="row">
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-info">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $prestamista;?></h3>
                 <h5>Prestamista</h5>
@@ -51,7 +51,7 @@ $total_final = $capital+$interes;
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-success">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $capital;?></h3>
                 <h5>Capital a pagar</h5>
@@ -59,7 +59,7 @@ $total_final = $capital+$interes;
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-warning">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $interes;?></h3>
                 <h5>Interes a pagar</h5>
@@ -67,9 +67,9 @@ $total_final = $capital+$interes;
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-danger">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
-                <h3><?php echo $total_final;?></h3>
+                <h3><?php echo number_format($total_final, 2, '.', '');?></h3>
                 <h5>Total a Pagar</h5>
             </div>
         </div>

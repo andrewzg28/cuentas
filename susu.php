@@ -14,31 +14,17 @@ $view="susu";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Susu | AMG! System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/all.min.css">
-  <script src="fonts/all.js"></script>
-  <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.min.css">
-  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="css/jqvmap.min.css">
+  <link rel="stylesheet" href="fonts/css/all.min.css">
+  <script src="fonts/js/all.js"></script>
   <link rel="stylesheet" href="css/adminlte.min.css">
   <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="css/daterangepicker.css">
-  <link rel="stylesheet" href="css/summernote-bs4.css">
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/summernote-bs4.min.js"></script>
-  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
-  <script src="scripts/adminlte.js"></script>
-  <script src="scripts/dashboard.js"></script>
-  <script src="scripts/demo.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-
+  
   <!-- Select2 -->
   <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/select2-bootstrap4.min.css">
-  <!-- Select2 -->
-  <script src="scripts/select2.full.min.js"></script>
+ 
 
 
   <link rel="icon" type="image/png" href="img/logo.png" />
@@ -99,9 +85,8 @@ $view="susu";
               <div class="card-body">
               <table class="table table-hover table-responsive-xl" style="text-align:center;">
                 <thead>
-                  <th>#</th>
-                  <th>Persona</th>
-                  <th>Pago</th>
+                  <th style="width:500px;">Persona</th>
+                  <th style="width:500px;">Pago</th>
                 </thead>
                 <tbody>
                 <?php
@@ -113,7 +98,6 @@ $view="susu";
                         $pago = "<b style='color:green;'>".$row["pago"]."</b>";
                     }
                     echo "<tr>
-                      <td>".$row["id_susu"]."</td>
                       <td>".$row["persona"]."</td>
                       <td>".$pago."</td>
                     </tr>";
@@ -140,22 +124,37 @@ $view="susu";
           <h4 class="modal-title">Listado de Susu <?php echo $ano;?></h4>
         </div>
         <div class="modal-body">
-            <table class="table table-hover table-responsive-sm">
+            <table class="table table-hover table-responsive-xl">
                 <thead>
-                    <th>Mes</th>
-                    <th style="text-align:center;">15</th>
-                    <th style="text-align:center;">30</th>
+                    <th style="width:500px;">Mes</th>
+                    <th style="text-align:center;width:500px;">15</th>
+                    <th style="text-align:center;width:500px;">30</th>
                 </thead>
                 <tbody>
                 <?php
                     while($row1 = $result1->fetch_assoc()) {
                     if($row1["id_susutoca"]<$mes){
                         $persona1 = "<s style='color:red;'>".$row1["Q1"]."</s>";
-                        $persona2 = "<s style='color:red;'>".$row1["Q2"]."</s>";
+                        $persona2 = "<s style='color:red;'>".$row1["Q2"]."</s>";                        
                     }
-                    else{
+                    elseif ($row1["id_susutoca"]==$mes) {
+                      #Mes actual
+                      if($dia <= 15){
+                        /*No se ha entregado susu, no se tacha ninguno*/
                         $persona1 = $row1["Q1"];
                         $persona2 = $row1["Q2"];
+                      }
+                      else{
+                        /*Dia mayor que quincena = segunda quincena*/
+                        $persona1 = "<s style='color:red;'>".$row1["Q1"]."</s>";
+                        $persona2 = $row1["Q2"];
+                      }
+                    }
+                    else{
+                        #Meses mayores al actual no llegado
+                        $persona1 = $row1["Q1"];
+                        $persona2 = $row1["Q2"];
+                       
                     }
                     echo "<tr>
                       <th>".$row1["mes"]."</th>
@@ -168,7 +167,7 @@ $view="susu";
             </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger btn-block" data-dismiss="modal" >Cerrar</button>
+          <button type="button" class="btn btn-info btn-block" data-dismiss="modal" >Cerrar</button>
         </div>
       </div>
     </div>
@@ -270,7 +269,15 @@ $view="susu";
   <!--FIN DE MODAL -->
  <?php include("footer.php");?>
 </div>
-<script>
+<script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.min.js"></script>
+  <script src="scripts/adminlte.js"></script>
+  <script src="scripts/demo.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+   <!-- Select2 -->
+   <script src="scripts/select2.full.min.js"></script>
+   <script>
   $(function () {
     //Initialize Select2 Elements
     $('.select2').select2()

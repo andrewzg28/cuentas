@@ -13,8 +13,14 @@ if(isset($_REQUEST["iniciar"])){
         header("Location: menu.php");
     }
     else{
-        echo '<div class="alert alert-danger" role="alert">
-        <b>Usuario</b> ó <b>contraseña</b> incorrecto!
-      </div>';
+        ?>
+        <script>
+            Swal.fire(
+            'Oops...',
+            'Credenciales Invalida',
+            'error'
+            )
+        </script>
+        <?php
     }
 }

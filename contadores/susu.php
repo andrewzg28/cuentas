@@ -31,7 +31,7 @@ else{
 ?>
 <div class="row">
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-success">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $total;?></h3>
                 <h5>Susu Acumulado</h5>
@@ -39,15 +39,15 @@ else{
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-primary">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $persona;?></h3>
-                <h5>Propietario Actual</h5>
+                <h5>Propietario</h5>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-warning">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3><?php echo $fecha;?></h3>
                 <h5><?php echo $pago_susu;?></h5>
@@ -55,7 +55,7 @@ else{
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-danger">
+        <div class="small-box" style="background-color: #2663a1; color:white;">
             <div class="inner">
                 <h3>$240.00</h3>
                 <h5>Total a entregar</h5>

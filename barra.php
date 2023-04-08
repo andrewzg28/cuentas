@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item has-treeview menu-open">
@@ -14,7 +15,7 @@
               <p>
                 Control Cuentas
                 <i class="fas fa-angle-left right"></i>
-                <span class="right badge badge-warning">4</span>
+                <span class="right badge badge-danger">4</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -54,12 +55,29 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="salir.php" class="nav-link">
+            <a href="#" class="nav-link" onclick="salir();">
             <i class="fas fa-power-off"></i>
               <p>
                 Salir
               </p>
             </a>
+            <script>
+              function salir(){
+                Swal.fire({
+                  title: '¿Seguro que desea salir?',
+                  icon: 'question',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Sí, salir!', 
+                  cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = "salir.php";
+                  }
+                })
+              }
+            </script>
           </li>
         </ul>
       </nav>
